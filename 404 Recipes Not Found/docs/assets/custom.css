@@ -1,0 +1,10 @@
+/* Optional overrides for the minima theme */
+
+code, pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+pre {
+  padding: 12px;
+  border-radius: 8px;
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Segfault Soufflé • 404 Recipes Not Found</title>
+    <link rel="stylesheet" href="../assets/site.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="brand">404 Recipes Not Found</div>
+      <nav class="links">
+        <a href="../index.html">Home</a>
+        <a href="../recipes.html">Recipes</a>
+        <a href="../contributing.html">Contributing</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="card">
+        <h1>Segfault Soufflé</h1>
+
+        <h2>Summary</h2>
+        <p>A soufflé that crashes right after rising.</p>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li>3 eggs (uninitialized)</li>
+          <li>1 cup sugar (overflowing)</li>
+          <li>1 tsp vanilla (deprecated)</li>
+        </ul>
+
+        <h2>Steps</h2>
+        <ol>
+          <li>Preheat oven to <span class="kbd">375°F</span>.</li>
+          <li>Whisk eggs until they <em>almost</em> form stable pointers.</li>
+          <li>Fold in sugar until the mixture hits an <strong>unexpected memory boundary</strong>.</li>
+          <li>Bake until it rises, then watch it instantly collapse.</li>
+        </ol>
+
+        <h2>Error</h2>
+        <pre><code>SIGSEGV: invalid access in function `souffle_rise()`</code></pre>
+
+        <h2>Stack Trace</h2>
+        <pre><code>#0  0x0000deadbeef in souffle_rise()
+#1  0x0000cafebabe in bake_dessert()
+#2  0x0000feedface in main()</code></pre>
+
+        <h2>Fix Attempt</h2>
+        <ul>
+          <li>Added more sugar (made it crash faster)</li>
+          <li>Wrapped the pan in foil (hid the crash, did not fix it)</li>
+        </ul>
+
+        <h2>Postmortem</h2>
+        <ul>
+          <li>Don’t mix “just one more tweak” with heat and deadlines.</li>
+          <li>Add checks (and timers) before you ship desserts.</li>
+        </ul>
+
+        <h2>Tags</h2>
+        <ul>
+          <li>#dessert</li>
+          <li>#crash</li>
+          <li>#retro</li>
+        </ul>
+      </div>
+    </main>
+
+    <script src="../_shared.js"></script>
+  </body>
+</html>

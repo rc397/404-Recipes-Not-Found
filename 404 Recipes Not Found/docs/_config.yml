@@ -1,0 +1,12 @@
+title: "404 Recipes Not Found"
+description: "A parody cookbook of failed recipes with code-style error messages"
+theme: minima
+markdown: kramdown
+
+# GitHub Pages safe settings
+plugins: []
+
+# Site structure
+header_pages:
+  - index.md
+  - recipes.md
