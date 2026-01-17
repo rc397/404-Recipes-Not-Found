@@ -1,9 +1,6 @@
-# Flavourthon
+# 404 Recipes Not Found
 
-A grab-bag of fun, flavor-themed hackathon mini-projects.
+A parody cookbook of failed recipes with code-style error messages.
 
-## Projects
-- [404 Recipes Not Found](404%20Recipes%20Not%20Found) — static HTML joke funny cookbook to warn others.
-## Notes
-- No pushing/committing was requested originally; doing it now per request.
+Project folder: `404 Recipes Not Found/`
 
